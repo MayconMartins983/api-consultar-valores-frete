@@ -6,10 +6,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,7 +20,7 @@ public interface IPricesByRegionSwagger {
     )
     List<PricesRegionResponse> getAllPricesByRegion();
 
-    @PostMapping("id/{idRegion}")
+    @PutMapping("id/{idRegion}")
     @Operation(summary = "End point to update price Freight of region")
     @ApiResponses(
             @ApiResponse(responseCode = "200", description = "Prices by region updated successfully")

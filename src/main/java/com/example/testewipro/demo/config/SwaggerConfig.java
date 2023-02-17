@@ -17,8 +17,9 @@ public class SwaggerConfig {
 
     private static Info info() {
         return new Info()
-                .title("API to query CEP and Freight")
-                .description("Search here for information on addresses and shipping costs for each region")
+                .title("API to query Zip code and Freight")
+                .description("Search for shipping prices by region and also change shipping" +
+                        " prices for each region if necessary")
                 .license(new License()
                         .name("Apache 2.0")
                         .url("https://springdoc.org")
