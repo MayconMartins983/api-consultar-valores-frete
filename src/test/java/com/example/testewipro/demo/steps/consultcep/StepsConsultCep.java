@@ -1,4 +1,4 @@
-package com.example.testewipro.demo.steps;
+package com.example.testewipro.demo.steps.consultcep;
 
 import com.example.testewipro.demo.CucumberBootstrap;
 import com.example.testewipro.demo.controller.contractswagger.IConsultaCepSwagger;
