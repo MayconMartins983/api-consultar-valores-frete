@@ -41,7 +41,7 @@ public class ConsultCepClient {
         parameterUrl.put("uf", uf);
 
         try {
-            var data = restTemplate.getForObject(urlBrasilApi, DataFromBrasilCep.class, parameterUrl);
+            DataFromBrasilCep data = restTemplate.getForObject(urlBrasilApi, DataFromBrasilCep.class, parameterUrl);
 
             if (data != null && data.getRegiao() != null) {
                 return data.getRegiao().getNome();

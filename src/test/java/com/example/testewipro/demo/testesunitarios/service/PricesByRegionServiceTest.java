@@ -1,10 +1,11 @@
-package com.example.testewipro.demo.service;
+package com.example.testewipro.demo.testesunitarios.service;
 
 import com.example.testewipro.demo.dto.PricesRegionRequest;
 import com.example.testewipro.demo.dto.PricesRegionResponse;
 import com.example.testewipro.demo.exceptions.ResourceNotFoundException;
 import com.example.testewipro.demo.model.PricesRegion;
 import com.example.testewipro.demo.repository.PricesRegionRepository;
+import com.example.testewipro.demo.service.PricesByRegionService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;

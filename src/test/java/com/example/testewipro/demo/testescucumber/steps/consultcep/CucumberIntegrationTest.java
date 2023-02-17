@@ -1,4 +1,4 @@
-package com.example.testewipro.demo.steps.consultcep;
+package com.example.testewipro.demo.testescucumber.steps.consultcep;
 
 import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.platform.engine.Cucumber;

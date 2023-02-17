@@ -2,6 +2,7 @@ package com.example.testewipro.demo.service;
 
 import com.example.testewipro.demo.clients.ConsultCepClient;
 import com.example.testewipro.demo.dto.ConsultCepResponse;
+import com.example.testewipro.demo.dto.DataFromViaCep;
 import com.example.testewipro.demo.exceptions.ResourceNotFoundException;
 import com.example.testewipro.demo.exceptions.ValidationExceptionCustom;
 import com.example.testewipro.demo.repository.PricesRegionRepository;
@@ -18,8 +19,8 @@ public class ConsultCepService {
     private PricesRegionRepository repository;
 
     public ConsultCepResponse consultFreightAndCep(String cep) {
-        var cepFormatted = processCep(cep);
-        var address = client.findAdressesByCep(cepFormatted);
+        String cepFormatted = processCep(cep);
+        DataFromViaCep address = client.findAdressesByCep(cepFormatted);
 
         if (address.getErro() != null) {
             throw new ResourceNotFoundException("zip code not found in the viaCep database.");

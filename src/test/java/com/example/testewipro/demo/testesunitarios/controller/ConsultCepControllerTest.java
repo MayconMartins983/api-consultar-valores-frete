@@ -1,4 +1,4 @@
-package com.example.testewipro.demo.controller;
+package com.example.testewipro.demo.testesunitarios.controller;
 
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
@@ -18,7 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @ExtendWith({SpringExtension.class})
 @ActiveProfiles("test")
 @SpringBootTest
-class ConsultaCepControllerTest {
+class ConsultCepControllerTest {
 
     private static final String URL = "/v1/consulta-endereco";
 

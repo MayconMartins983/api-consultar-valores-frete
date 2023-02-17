@@ -1,4 +1,4 @@
-package com.example.testewipro.demo.controller;
+package com.example.testewipro.demo.testesunitarios.controller;
 
 import com.example.testewipro.demo.model.PricesRegion;
 import com.example.testewipro.demo.repository.PricesRegionRepository;

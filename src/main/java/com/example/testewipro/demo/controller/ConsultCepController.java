@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("v1/consulta-endereco")
-public class ConsultaCepController implements IConsultaCepSwagger {
+public class ConsultCepController implements IConsultaCepSwagger {
 
     @Autowired
     private ConsultCepService service;

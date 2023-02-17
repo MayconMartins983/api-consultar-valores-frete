@@ -1,16 +1,13 @@
-package com.example.testewipro.demo.steps.pricebyregion;
+package com.example.testewipro.demo.testescucumber.steps.pricebyregion;
 
-import com.example.testewipro.demo.CucumberBootstrap;
+import com.example.testewipro.demo.testescucumber.CucumberBootstrap;
 import com.example.testewipro.demo.dto.PricesRegionRequest;
 import com.example.testewipro.demo.dto.PricesRegionResponse;
-import com.example.testewipro.demo.clientsCucumber.ConsultCepClientCucumber;
-import com.example.testewipro.demo.exceptions.ResourceNotFoundException;
-import feign.FeignException;
+import com.example.testewipro.demo.testescucumber.steps.clientshttp.ConsultPricesByRegionClient;
 import io.cucumber.java.After;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
-import org.assertj.core.api.Assertions;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.math.BigDecimal;
@@ -23,7 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class StepsPricesByRegion extends CucumberBootstrap {
 
     @Autowired
-    private ConsultCepClientCucumber client;
+    private ConsultPricesByRegionClient client;
 
     @After
     public void after() {

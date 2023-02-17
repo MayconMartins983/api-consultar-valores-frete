@@ -1,4 +1,4 @@
-package com.example.testewipro.demo.helper;
+package com.example.testewipro.demo.testesunitarios.helper;
 
 import com.example.testewipro.demo.dto.DataFromBrasilCep;
 import com.example.testewipro.demo.dto.DataFromViaCep;

@@ -1,6 +1,7 @@
-package com.example.testewipro.demo.repository;
+package com.example.testewipro.demo.testesunitarios.repository;
 
 import com.example.testewipro.demo.model.PricesRegion;
+import com.example.testewipro.demo.repository.PricesRegionRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -35,7 +36,7 @@ class PricesRegionRepositoryTest {
 
     @Test
     void findPriceOfFreightByRegion_shouldReturnPrice_ifRequested() {
-        var priceTest = repository.findPriceOfFreightByRegion("test Region");
+        BigDecimal priceTest = repository.findPriceOfFreightByRegion("test Region");
 
         assertThat(priceTest).isEqualTo(new BigDecimal("100.00"));
     }

@@ -1,9 +1,11 @@
-package com.example.testewipro.demo.clients;
+package com.example.testewipro.demo.testesunitarios.clients;
 
 
+import com.example.testewipro.demo.clients.ConsultCepClient;
 import com.example.testewipro.demo.dto.DataFromBrasilCep;
 import com.example.testewipro.demo.dto.DataFromViaCep;
 import com.example.testewipro.demo.exceptions.ResourceNotFoundException;
+import com.example.testewipro.demo.testesunitarios.helper.Helper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -17,7 +19,6 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.HashMap;
 
-import static com.example.testewipro.demo.helper.Helper.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.doThrow;
@@ -46,11 +47,11 @@ class ConsultCepClientTest {
         HashMap<String, String> parameterUrl = new HashMap<>();
         parameterUrl.put("cep", "01022365");
         when(restTemplate.getForObject(URL_VIA_CEP,
-                DataFromViaCep.class, parameterUrl)).thenReturn(oneMockDataFromViaCep());
+                DataFromViaCep.class, parameterUrl)).thenReturn(Helper.oneMockDataFromViaCep());
 
         var response = client.findAdressesByCep("01022365");
 
-        assertThat(response).isEqualTo(oneMockDataFromViaCep());
+        assertThat(response).isEqualTo(Helper.oneMockDataFromViaCep());
     }
 
     @Test
@@ -69,7 +70,7 @@ class ConsultCepClientTest {
         HashMap<String, String> parameterUrl = new HashMap<>();
         parameterUrl.put("uf", "Sp");
         when(restTemplate.getForObject(URL_BRASIL_API,
-                DataFromBrasilCep.class, parameterUrl)).thenReturn(oneMockDataFromBrasilCep());
+                DataFromBrasilCep.class, parameterUrl)).thenReturn(Helper.oneMockDataFromBrasilCep());
 
         var response = client.findRegionByUf("Sp");
 
@@ -102,7 +103,7 @@ class ConsultCepClientTest {
         HashMap<String, String> parameterUrl = new HashMap<>();
         parameterUrl.put("uf", "Sp");
         when(restTemplate.getForObject(URL_BRASIL_API,
-                DataFromBrasilCep.class, parameterUrl)).thenReturn(oneMockDataFromBrasilCepWithRegionNull());
+                DataFromBrasilCep.class, parameterUrl)).thenReturn(Helper.oneMockDataFromBrasilCepWithRegionNull());
 
         assertThrows(ResourceNotFoundException.class, () -> client.findRegionByUf("Sp"));
     }

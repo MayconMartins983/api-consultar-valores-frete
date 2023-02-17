@@ -1,4 +1,4 @@
-package com.example.testewipro.demo.steps.pricebyregion;
+package com.example.testewipro.demo.testescucumber.steps.pricebyregion;
 
 import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.platform.engine.Cucumber;

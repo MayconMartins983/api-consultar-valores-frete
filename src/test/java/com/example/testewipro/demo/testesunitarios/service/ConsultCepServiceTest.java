@@ -1,8 +1,10 @@
-package com.example.testewipro.demo.service;
+package com.example.testewipro.demo.testesunitarios.service;
 
 import com.example.testewipro.demo.clients.ConsultCepClient;
+import com.example.testewipro.demo.dto.ConsultCepResponse;
 import com.example.testewipro.demo.exceptions.ValidationExceptionCustom;
 import com.example.testewipro.demo.repository.PricesRegionRepository;
+import com.example.testewipro.demo.service.ConsultCepService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -12,7 +14,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.math.BigDecimal;
 
-import static com.example.testewipro.demo.helper.Helper.oneMockDataFromViaCep;
+import static com.example.testewipro.demo.testesunitarios.helper.Helper.oneMockDataFromViaCep;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import static org.mockito.Mockito.*;
@@ -39,7 +41,7 @@ class ConsultCepServiceTest {
         when(repository.findPriceOfFreightByRegion("Sudeste"))
                 .thenReturn(new BigDecimal("7.85"));
 
-        var response = service.consultFreightAndCep("01001000");
+        ConsultCepResponse response = service.consultFreightAndCep("01001000");
 
         assertThat(response)
                 .extracting("cep", "rua", "complemento", "bairro", "cidade", "estado", "frete")
@@ -60,7 +62,7 @@ class ConsultCepServiceTest {
         when(repository.findPriceOfFreightByRegion("Sudeste"))
                 .thenReturn(new BigDecimal("7.85"));
 
-        var response = service.consultFreightAndCep("01001-000");
+        ConsultCepResponse response = service.consultFreightAndCep("01001-000");
 
         assertThat(response)
                 .extracting("cep", "rua", "complemento", "bairro", "cidade", "estado", "frete")
