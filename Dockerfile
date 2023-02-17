@@ -2,6 +2,6 @@ FROM adoptopenjdk:11-jre-hotspot
 
 WORKDIR /app
 
-COPY target/demo-zid-code-consult.jar /app
+COPY target/api-zip-code-1.0.0.jar /app
 
-CMD ["java", "-jar", "demo-zid-code-consult.jar"]
+CMD ["java", "-jar", "api-zip-code-1.0.0.jar"]

@@ -9,8 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>demo</artifactId>
-	<version>zid-code-consult</version>
+	<artifactId>api-zip-code</artifactId>
+	<version>1.0.0</version>
 	<name>teste-wipro</name>
 	<description>Teste Wipro</description>
 	<properties>
