@@ -36,6 +36,7 @@
 
 <h3>Com o docker</h3>
 <p>Clone o repositório, abra a aplicação na pasta raiz onde possui o file dockerfile e execulte os seguintes comandos:</p>
+<li>mvn clean package</li>
 <li>"docker build -t {nome da imagem aqui}  ."</li>
 <li>"docker run --name {nome do container aqui} -p 8081:8081 { IMAGE ID  aqui}"</li>
 <li>Espere a aplicação subir e acesse os end points</li>
