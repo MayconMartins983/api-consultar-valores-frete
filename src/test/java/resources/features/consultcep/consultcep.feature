@@ -19,4 +19,4 @@ Funcionalidade: Buscar valor do frete pelo cep
   Cenario: Usuario recebe erro ao buscar cep que não existe
     Dado que o usuario queira buscar o frete para o cep "99999-999"
     Quando ele colocar o valor acima no corpo da requisição http pelo Postman
-    Então ele receberá erro 400 bad request do tipo ResourceNotFoundException
+    Então ele receberá erro 404 not found do tipo ResourceNotFoundException

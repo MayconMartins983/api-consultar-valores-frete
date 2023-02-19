@@ -89,7 +89,7 @@ public class StepsConsultCep extends CucumberBootstrap {
         }
     }
 
-    @Então("ele receberá erro 400 bad request do tipo ResourceNotFoundException")
+    @Então("ele receberá erro 404 not found do tipo ResourceNotFoundException")
     public void entao_cenario_cep_inexistente() {
         assertThat(exception)
                 .isInstanceOf(ResourceNotFoundException.class);
